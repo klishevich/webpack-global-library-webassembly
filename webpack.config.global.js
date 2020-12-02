@@ -7,7 +7,7 @@ module.exports = (env, argv) => {
     const conf = {
         mode: "development",
         entry: {
-            superlib: [`./src/index.js`],
+            superlib: [`./src/index.ts`],
         },
         devServer: {
             contentBase: path.join(__dirname, "client"),
@@ -46,15 +46,18 @@ module.exports = (env, argv) => {
         module: {
             rules: [
                 {
-                    test: /\.js$/,
+                    test: /\.ts$/,
                     exclude: /(node_modules|bower_components)/,
                     use: [
                         {
-                            loader: "babel-loader",
+                            loader: "ts-loader",
                         },
                     ],
                 },
             ],
+        },
+        resolve: {
+            extensions: [".tsx", ".ts", ".js"]
         },
     };
 

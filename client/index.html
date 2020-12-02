@@ -12,19 +12,19 @@
             const SuperLib = window.SuperLib;
             const sciChartSurface = new SuperLib.SciChartSurface();
             console.log(sciChartSurface.sayHello());
+            console.log(SuperLib.sciChartSurfaceTest());
 
             const rect = new SuperLib.Rect();
             console.log(rect.sayHello());
 
-            console.log(SuperLib.IS_TEST_ENV);
-
-
+            console.log("IS_TEST_ENV", SuperLib.IS_TEST_ENV);
 
             (async function test() {
                 console.log(100);
                 const wasmContext = await SuperLib.loadWasm();
                 console.log(200, wasmContext);
                 console.log(201, wasmContext.lerp(1, 2, 0.5));
+                console.log(202, sciChartSurface.sayWasmHello(wasmContext));
             })();
         </script>
     </body>

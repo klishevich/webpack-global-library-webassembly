@@ -1,11 +1,12 @@
-import WasmTestModule from "../../_wasm/module_test1.js";
+// @ts-ignore
+import * as WasmTestModule from "../../_wasm/module_test1.js";
 
 export class SciChartSurface {
     sayHello() {
         return "Hi, I am SciChartSurface class.";
     }
 
-    sayWasmHello(wasmContext) {
+    sayWasmHello(wasmContext: any) {
         if (!wasmContext) {
             return "wasmContext can not be undefined!";
         }
@@ -18,18 +19,13 @@ export function sciChartSurfaceTest() {
 }
 
 export function loadWasm() {
-    // console.log(1011);
-    // new WasmTestModule().then((wasmContext) => {
-    //     console.log(102);
-    //     console.log(103, wasmContext);
-    // });
     (async () => {
         console.log(999);
     })();
     return new Promise((resolve, reject) => {
-        // console.log(101);
-        new WasmTestModule().then((wasmContext) => {
-            // console.log(102);
+        // throw Error("error");
+        // @ts-ignore
+        new WasmTestModule().then((wasmContext: any) => {
             resolve(wasmContext);
         });
     });
