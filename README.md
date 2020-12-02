@@ -1,0 +1,1 @@
+# webpack-global-library-webassembly
