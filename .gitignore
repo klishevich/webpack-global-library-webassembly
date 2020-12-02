@@ -4,3 +4,5 @@
 .DS_Store
 package-lock.json
 client/superlib.develop.js
+client/superlib.min.js
+client/module_test1.wasm

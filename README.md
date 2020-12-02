@@ -1,5 +1,10 @@
 # webpack-global-library-webassembly
 
-* `npm run build`
+## Testing
+
 * `npm start`
 * open the browser console to check output
+
+## Production build
+ 
+* `npm run build`
