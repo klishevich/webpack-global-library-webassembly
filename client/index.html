@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Webpack Global Library with WebAssembly</title>
+</head>
+<body>
+<h3>Webpack Global Library with WebAssembly</h3>
+<script src="superlib.develop.js"></script>
+<script>
+    const SuperLib = window.SuperLib;
+    const sciChartSurface = new SuperLib.SciChartSurface();
+    console.log(sciChartSurface.sayHello());
+
+    const rect = new SuperLib.Rect();
+    console.log(rect.sayHello());
+
+    console.log(SuperLib.IS_TEST_ENV);
+</script>
+</body>
+</html>
